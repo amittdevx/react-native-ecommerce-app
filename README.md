@@ -1,97 +1,116 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# React Native E-commerce Application
 
-# Getting Started
+## Overview
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+This project is a mobile e-commerce application built using React Native CLI.  
+It demonstrates a complete user flow including authentication, product listing with pagination, product details, and cart management.
 
-## Step 1: Start Metro
+The goal of this project is to showcase clean code structure, proper state management, and a smooth user experience.
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+---
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+## Features
 
-```sh
-# Using npm
-npm start
+### Authentication
+- Phone number based login
+- Mock OTP verification (OTP: 1234)
+- Navigation to Home screen after successful login
 
-# OR using Yarn
-yarn start
-```
+### Product Listing
+- Products fetched from: https://dummyjson.com/products
+- Pagination using limit and skip
+- Infinite scrolling
+- Loading indicator while fetching data
+- Basic error handling
 
-## Step 2: Build and run your app
+### Product Detail
+- Displays product image, title, price, and description
+- Add to cart functionality
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+### Cart Functionality
+- Add products to cart
+- Remove individual items
+- Increase / decrease quantity
+- Clear cart option
+- Total price calculation
+- Empty cart state UI
 
-### Android
+---
 
-```sh
-# Using npm
-npm run android
+## Tech Stack
 
-# OR using Yarn
-yarn android
-```
+- React Native CLI
+- JavaScript (ES6+)
+- React Navigation (Stack Navigator)
+- Axios
+- Context API
 
-### iOS
+---
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+## Project Structure
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+src/
+  components/
+  screens/
+    Auth/
+    Home/
+    Product/
+    Cart/
+  navigation/
+  services/
+  store/
+  utils/
 
-```sh
-bundle install
-```
+---
 
-Then, and every time you update your native dependencies, run:
+## State Management Approach
 
-```sh
-bundle exec pod install
-```
+The application uses the React Context API for managing global state.
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+- Cart state is managed centrally
+- Provides functions for adding, removing, and updating items
+- Keeps business logic separate from UI
 
-```sh
-# Using npm
-npm run ios
+---
 
-# OR using Yarn
-yarn ios
-```
+## API Integration
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+- Base URL: https://dummyjson.com
+- Endpoint used: /products
+- Pagination handled using:
+  - limit
+  - skip
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+---
 
-## Step 3: Modify your app
+## Setup Instructions
 
-Now that you have successfully run the app, let's make changes!
+### Prerequisites
+- Node.js installed
+- React Native CLI setup
+- Android Studio installed
+- Physical device or emulator
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+### Installation
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+npm install
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+### Run the app
 
-## Congratulations! :tada:
+npx react-native run-android
 
-You've successfully run and modified your React Native App. :partying_face:
+---
 
-### Now what?
+## Key Decisions
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+- Used Context API for simplicity and scalability
+- Separated API logic into a service layer
+- Followed modular folder structure
+- Focused on clean and readable code
 
-# Troubleshooting
+---
 
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+## Notes
 
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+- OTP authentication is implemented using a mock value (1234)
+- The project focuses on functionality and structure rather than complex UI
