@@ -1,0 +1,1 @@
+C:\Users\amit_\EcommerceApp\android\app\build\intermediates\cxx\RelWithDebInfo\6tt60b5e\obj\arm64-v8a

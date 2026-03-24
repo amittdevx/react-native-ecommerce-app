@@ -26,7 +26,7 @@ export default function HomeScreen({ navigation }) {
             setProducts((prev) => [...prev, ...res.products]);
             setSkip((prev) => prev + 10);
         } catch (err) {
-            console.log("ERROR:", err);
+            alert("Unable to load products. Please check your internet connection.");
         }
         setLoading(false);
     };
@@ -91,8 +91,8 @@ const styles = StyleSheet.create({
         paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
         paddingHorizontal: 16,
         paddingBottom: 14,
-        elevation: 4, 
-        
+        elevation: 4,
+
     },
 
     headerTitle: {

@@ -1,0 +1,4 @@
+C:/Users/amit_/EcommerceApp/android/app/.cxx/RelWithDebInfo/6tt60b5e/arm64-v8a/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/foo.dir
+C:/Users/amit_/EcommerceApp/android/app/.cxx/RelWithDebInfo/6tt60b5e/arm64-v8a/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/boo.dir
+C:/Users/amit_/EcommerceApp/android/app/.cxx/RelWithDebInfo/6tt60b5e/arm64-v8a/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/edit_cache.dir
+C:/Users/amit_/EcommerceApp/android/app/.cxx/RelWithDebInfo/6tt60b5e/arm64-v8a/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/rebuild_cache.dir
